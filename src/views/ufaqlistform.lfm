@@ -1,0 +1,248 @@
+object FaqListForm: TFaqListForm
+  Left = 300
+  Height = 483
+  Top = 150
+  Width = 895
+  Caption = 'Daftar Basis Data FAQ & Regulasi Pajak'
+  ClientHeight = 483
+  ClientWidth = 895
+  Position = poScreenCenter
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  object dbGridFaq: TDBGrid
+    Cursor = crHandPoint
+    Left = 5
+    Height = 431
+    Top = 47
+    Width = 88
+    Align = alLeft
+    AlternateColor = 15923186
+    AutoFillColumns = True
+    BorderSpacing.Around = 5
+    BorderStyle = bsNone
+    Color = 15725820
+    Columns = <    
+      item
+        Alignment = taCenter
+        Title.Caption = 'id'
+        Width = 88
+        FieldName = 'id'
+      end>
+    DataSource = dsFaq
+    FixedCols = 0
+    Flat = True
+    Options = [dgTitles, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ReadOnly = True
+    Scrollbars = ssNone
+    TabOrder = 0
+  end
+  object pnlBottom: TPanel
+    Left = 98
+    Height = 431
+    Top = 47
+    Width = 792
+    Align = alClient
+    BorderSpacing.Around = 5
+    BevelOuter = bvNone
+    ClientHeight = 431
+    ClientWidth = 792
+    TabOrder = 1
+    object pnlMain: TPanel
+      Left = 0
+      Height = 96
+      Top = 0
+      Width = 792
+      Align = alTop
+      BevelOuter = bvNone
+      ClientHeight = 96
+      ClientWidth = 792
+      TabOrder = 0
+      object lblJawaban: TLabel
+        Left = 8
+        Height = 15
+        Top = 0
+        Width = 784
+        Align = alTop
+        BorderSpacing.Left = 8
+        Caption = 'Detail Isi Pertanyaan Lengkap:'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object dbmPertanyaan: TDBMemo
+        Left = 7
+        Height = 75
+        Top = 18
+        Width = 782
+        Align = alClient
+        BorderSpacing.Left = 4
+        BorderSpacing.Around = 3
+        Color = 16119285
+        DataField = 'tanya'
+        DataSource = dsFaq
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
+    end
+    object splitterVert: TSplitter
+      Left = 0
+      Height = 230
+      Top = 96
+      Width = 5
+    end
+    object pnlRightMemo: TPanel
+      Left = 5
+      Height = 230
+      Top = 96
+      Width = 787
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 230
+      ClientWidth = 787
+      TabOrder = 2
+      object lblReferensi: TLabel
+        Left = 6
+        Height = 15
+        Top = 0
+        Width = 781
+        Align = alTop
+        BorderSpacing.Left = 6
+        Caption = 'Detail Isi Jawaban Lengkap:'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object dbmJawaban: TDBMemo
+        Left = 3
+        Height = 209
+        Top = 18
+        Width = 781
+        Align = alClient
+        BorderSpacing.Around = 3
+        Color = 15726834
+        DataField = 'jawaban'
+        DataSource = dsFaq
+        ScrollBars = ssAutoVertical
+        TabOrder = 0
+      end
+    end
+    object dbmReferensi: TDBMemo
+      Left = 7
+      Height = 51
+      Top = 344
+      Width = 782
+      Align = alBottom
+      BorderSpacing.Left = 4
+      BorderSpacing.Around = 3
+      Color = 15596030
+      DataField = 'referensi'
+      DataSource = dsFaq
+      ScrollBars = ssAutoVertical
+      TabOrder = 3
+    end
+    object lblReferensi1: TLabel
+      Left = 8
+      Height = 15
+      Top = 326
+      Width = 784
+      Align = alBottom
+      BorderSpacing.Left = 8
+      Caption = 'Dasar Hukum / Referensi Pasal:'
+      Font.Style = [fsBold]
+      ParentColor = False
+      ParentFont = False
+    end
+    object Panel1: TPanel
+      Left = 0
+      Height = 33
+      Top = 398
+      Width = 792
+      Align = alBottom
+      BevelOuter = bvNone
+      ClientHeight = 33
+      ClientWidth = 792
+      TabOrder = 4
+      object btDelete: TButton
+        Left = 717
+        Height = 33
+        Top = 0
+        Width = 75
+        Align = alRight
+        Caption = 'Hapus'
+        TabOrder = 0
+        OnClick = btDeleteClick
+      end
+      object btnSimpan: TButton
+        Left = 584
+        Height = 33
+        Top = 0
+        Width = 133
+        Align = alRight
+        Caption = 'Simpan Perubahan'
+        TabOrder = 1
+        OnClick = btnSimpanClick
+      end
+      object btnAdd: TButton
+        Left = 0
+        Height = 33
+        Top = 0
+        Width = 75
+        Align = alLeft
+        Caption = 'Tambah'
+        TabOrder = 2
+        OnClick = btnAddClick
+      end
+      object Button1: TButton
+        Left = 75
+        Height = 33
+        Top = 0
+        Width = 75
+        Align = alLeft
+        Caption = 'Validasi'
+        TabOrder = 3
+      end
+    end
+  end
+  object Panel3: TPanel
+    Left = 0
+    Height = 42
+    Top = 0
+    Width = 895
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 42
+    ClientWidth = 895
+    Color = 15592169
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 2
+    object EdtCari: TEdit
+      AnchorSideLeft.Control = Panel3
+      AnchorSideLeft.Side = asrCenter
+      AnchorSideTop.Control = Panel3
+      AnchorSideTop.Side = asrCenter
+      Left = 313
+      Height = 23
+      Top = 10
+      Width = 268
+      Alignment = taCenter
+      Color = 15597306
+      TabOrder = 0
+      OnKeyPress = EdtCariKeyPress
+    end
+  end
+  object qryFaq: TSQLQuery
+    FieldDefs = <>
+    Params = <>
+    Macros = <>
+    Left = 40
+    Top = 72
+  end
+  object dsFaq: TDataSource
+    DataSet = qryFaq
+    Left = 112
+    Top = 72
+  end
+end

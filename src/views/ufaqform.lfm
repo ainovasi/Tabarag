@@ -1,0 +1,85 @@
+object FaqForm: TFaqForm
+  Left = 350
+  Height = 420
+  Top = 200
+  Width = 520
+  Caption = 'Tambah Data FAQ & Vektor Semantik'
+  ClientHeight = 420
+  ClientWidth = 520
+  Position = poMainFormCenter
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object lblTanya: TLabel
+    Left = 20
+    Height = 15
+    Top = 20
+    Width = 480
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Pertanyaan (Tanya):'
+    ParentColor = False
+  end
+  object edtTanya: TEdit
+    Left = 20
+    Height = 23
+    Top = 40
+    Width = 480
+    Anchors = [akTop, akLeft, akRight]
+    TabOrder = 0
+  end
+  object lblJawaban: TLabel
+    Left = 20
+    Height = 15
+    Top = 80
+    Width = 480
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Jawaban:'
+    ParentColor = False
+  end
+  object memJawaban: TMemo
+    Left = 20
+    Height = 180
+    Top = 100
+    Width = 480
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    ScrollBars = ssAutoVertical
+    TabOrder = 1
+  end
+  object lblReferensi: TLabel
+    Left = 20
+    Height = 15
+    Top = 300
+    Width = 480
+    Anchors = [akLeft, akRight, akBottom]
+    Caption = 'Referensi / Dasar Hukum Pajak:'
+    ParentColor = False
+  end
+  object edtReferensi: TEdit
+    Left = 20
+    Height = 23
+    Top = 320
+    Width = 480
+    Anchors = [akLeft, akRight, akBottom]
+    TabOrder = 2
+  end
+  object btnSimpan: TButton
+    Left = 340
+    Height = 25
+    Top = 370
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Simpan'
+    TabOrder = 3
+    OnClick = btnSimpanClick
+  end
+  object btnBatal: TButton
+    Left = 425
+    Height = 25
+    Top = 370
+    Width = 75
+    Anchors = [akRight, akBottom]
+    Caption = 'Batal'
+    TabOrder = 4
+    OnClick = btnBatalClick
+  end
+end

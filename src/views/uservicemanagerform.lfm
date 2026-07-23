@@ -1,0 +1,166 @@
+object ServiceManagerForm: TServiceManagerForm
+  Left = 320
+  Height = 447
+  Top = 180
+  Width = 899
+  Caption = 'TaxRAG - Local AI Service Manager'
+  ClientHeight = 447
+  ClientWidth = 899
+  Color = clBtnFace
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Position = poScreenCenter
+  LCLVersion = '4.4.0.0'
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  object pnlControls: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 899
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 50
+    ClientWidth = 899
+    Color = clWhite
+    ParentBackground = False
+    ParentColor = False
+    TabOrder = 0
+    object btnStartEmbed: TButton
+      Left = 12
+      Height = 28
+      Top = 12
+      Width = 110
+      Caption = 'Start Embedding'
+      TabOrder = 0
+      OnClick = btnStartEmbedClick
+    end
+    object btnStopEmbed: TButton
+      Left = 128
+      Height = 28
+      Top = 12
+      Width = 110
+      Caption = 'Stop Embedding'
+      TabOrder = 1
+      OnClick = btnStopEmbedClick
+    end
+    object btnStartLLM: TButton
+      Left = 465
+      Height = 28
+      Top = 12
+      Width = 110
+      Caption = 'Start Gemma 3'
+      TabOrder = 2
+      OnClick = btnStartLLMClick
+    end
+    object btnStopLLM: TButton
+      Left = 581
+      Height = 28
+      Top = 12
+      Width = 110
+      Caption = 'Stop Gemma 3'
+      TabOrder = 3
+      OnClick = btnStopLLMClick
+    end
+  end
+  object pnlEmbedLeft: TPanel
+    Left = 0
+    Height = 397
+    Top = 50
+    Width = 460
+    Align = alLeft
+    BevelOuter = bvNone
+    ClientHeight = 397
+    ClientWidth = 460
+    ParentBackground = False
+    TabOrder = 1
+    object pnlEmbedHeader: TPanel
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 460
+      Align = alTop
+      Alignment = taLeftJustify
+      BevelOuter = bvNone
+      BorderWidth = 8
+      Caption = '  EMBEDDING ENGINE LOG (PORT 8081)'
+      Color = 4210752
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object memLogEmbed: TMemo
+      Left = 0
+      Height = 365
+      Top = 32
+      Width = 460
+      Align = alClient
+      BorderStyle = bsNone
+      Lines.Strings = (
+        ''
+      )
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 1
+    end
+  end
+  object splitterMain: TSplitter
+    Left = 460
+    Height = 397
+    Top = 50
+    Width = 5
+  end
+  object pnlLLMRight: TPanel
+    Left = 465
+    Height = 397
+    Top = 50
+    Width = 434
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 397
+    ClientWidth = 434
+    ParentBackground = False
+    TabOrder = 3
+    object pnlLLMHeader: TPanel
+      Left = 0
+      Height = 32
+      Top = 0
+      Width = 434
+      Align = alTop
+      Alignment = taLeftJustify
+      BevelOuter = bvNone
+      BorderWidth = 8
+      Caption = '  LLM CHAT GENERATION LOG (PORT 8082)'
+      Color = 2962226
+      Font.Color = clWhite
+      Font.Height = -12
+      Font.Name = 'Segoe UI'
+      Font.Style = [fsBold]
+      ParentBackground = False
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object memLogLLM: TMemo
+      Left = 0
+      Height = 365
+      Top = 32
+      Width = 434
+      Align = alClient
+      BorderStyle = bsNone
+      Lines.Strings = (
+        ''
+      )
+      ReadOnly = True
+      ScrollBars = ssAutoBoth
+      TabOrder = 1
+    end
+  end
+end

@@ -1,0 +1,515 @@
+object MainForm: TMainForm
+  Left = 250
+  Height = 597
+  Top = 150
+  Width = 1110
+  Caption = 'TabaRAG [ TaxBase Retrieval-Augmented Generation ]'
+  ClientHeight = 597
+  ClientWidth = 1110
+  Position = poScreenCenter
+  LCLVersion = '4.4.0.0'
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  object pgMain: TPageControl
+    Left = 0
+    Height = 597
+    Top = 0
+    Width = 833
+    ActivePage = tbsChat
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    TabPosition = tpBottom
+    object tbsChat: TTabSheet
+      Caption = 'ChatRoom'
+      ClientHeight = 569
+      ClientWidth = 825
+      OnShow = tbsChatShow
+      object Panel4: TPanel
+        Left = 0
+        Height = 569
+        Top = 0
+        Width = 825
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 569
+        ClientWidth = 825
+        TabOrder = 0
+        object pnlBottom: TPanel
+          Left = 0
+          Height = 50
+          Top = 519
+          Width = 825
+          Align = alBottom
+          BevelOuter = bvNone
+          ClientHeight = 50
+          ClientWidth = 825
+          TabOrder = 0
+          object edtInput: TEdit
+            Left = 8
+            Height = 34
+            Top = 8
+            Width = 716
+            Align = alClient
+            BorderSpacing.Around = 8
+            TabOrder = 0
+          end
+          object btnKirim: TButton
+            Left = 732
+            Height = 34
+            Top = 8
+            Width = 85
+            Align = alRight
+            Anchors = [akRight, akBottom]
+            BorderSpacing.Around = 8
+            Caption = 'Kirim'
+            Default = True
+            TabOrder = 1
+            OnClick = btnKirimClick
+          end
+        end
+        object Panel5: TPanel
+          Left = 0
+          Height = 519
+          Top = 0
+          Width = 825
+          Align = alClient
+          BevelOuter = bvNone
+          ClientHeight = 519
+          ClientWidth = 825
+          Color = clBlack
+          ParentBackground = False
+          ParentColor = False
+          TabOrder = 1
+          object memChat: TMemo
+            Left = 15
+            Height = 519
+            Top = 0
+            Width = 810
+            Align = alClient
+            BorderSpacing.Left = 15
+            BorderStyle = bsNone
+            Color = clBlack
+            Font.Color = clYellow
+            Font.Height = -15
+            Font.Name = 'Consolas'
+            Font.Quality = fqCleartype
+            ParentFont = False
+            ReadOnly = True
+            ScrollBars = ssAutoVertical
+            TabOrder = 0
+            WantTabs = True
+          end
+        end
+      end
+    end
+    object tbsData: TTabSheet
+      Caption = 'RAG Builder'
+      OnShow = tbsDataShow
+    end
+    object tbsLogLLM: TTabSheet
+      Caption = 'Log Gemma'
+      ClientHeight = 569
+      ClientWidth = 825
+      object pnlLLMHeader: TPanel
+        Left = 0
+        Height = 32
+        Top = 0
+        Width = 825
+        Align = alTop
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        BorderWidth = 8
+        Caption = '  LLM CHAT GENERATION LOG (PORT 8081)'
+        Color = 2962226
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 0
+      end
+      object memLogLLM: TMemo
+        Left = 0
+        Height = 537
+        Top = 32
+        Width = 825
+        Align = alClient
+        BorderStyle = bsNone
+        Lines.Strings = (
+          ''
+        )
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 1
+      end
+    end
+    object tbsLogBEG: TTabSheet
+      Caption = 'Log Bge'
+      ClientHeight = 569
+      ClientWidth = 825
+      object pnlEmbedHeader: TPanel
+        Left = 0
+        Height = 32
+        Top = 0
+        Width = 825
+        Align = alTop
+        Alignment = taLeftJustify
+        BevelOuter = bvNone
+        BorderWidth = 8
+        Caption = '  EMBEDDING ENGINE LOG (PORT 8080)'
+        Color = 4210752
+        Font.Color = clWhite
+        Font.Height = -12
+        Font.Name = 'Segoe UI'
+        Font.Style = [fsBold]
+        ParentBackground = False
+        ParentColor = False
+        ParentFont = False
+        TabOrder = 0
+      end
+      object memLogEmbed: TMemo
+        Left = 0
+        Height = 537
+        Top = 32
+        Width = 825
+        Align = alClient
+        BorderStyle = bsNone
+        Lines.Strings = (
+          ''
+        )
+        ReadOnly = True
+        ScrollBars = ssAutoBoth
+        TabOrder = 1
+      end
+    end
+    object tbsContext: TTabSheet
+      Caption = 'Prompt'
+      ClientHeight = 569
+      ClientWidth = 825
+      OnShow = tbsContextShow
+      object mmPrompt: TMemo
+        Left = 0
+        Height = 569
+        Top = 0
+        Width = 825
+        Align = alClient
+        ReadOnly = True
+        ScrollBars = ssVertical
+        TabOrder = 0
+      end
+    end
+  end
+  object pgRight: TPageControl
+    Left = 833
+    Height = 597
+    Top = 0
+    Width = 277
+    ActivePage = tbsMonitoring
+    Align = alRight
+    Style = tsButtons
+    TabIndex = 0
+    TabOrder = 1
+    object tbsMonitoring: TTabSheet
+      Caption = 'Log LLM'
+      ClientHeight = 566
+      ClientWidth = 269
+      object Panel1: TPanel
+        Left = 0
+        Height = 566
+        Top = 0
+        Width = 269
+        Align = alClient
+        BevelOuter = bvNone
+        ClientHeight = 566
+        ClientWidth = 269
+        TabOrder = 0
+        object GroupBox1: TGroupBox
+          Left = 5
+          Height = 97
+          Top = 157
+          Width = 259
+          Align = alTop
+          AutoSize = True
+          BorderSpacing.Around = 5
+          Caption = 'Penggunaan RAM'
+          ClientHeight = 77
+          ClientWidth = 255
+          TabOrder = 0
+          object lblRamStatus: TLabel
+            Left = 5
+            Height = 18
+            Top = 5
+            Width = 245
+            Align = alTop
+            Alignment = taCenter
+            AutoSize = False
+            BorderSpacing.Bottom = 1
+            BorderSpacing.Around = 5
+            Caption = 'lblRamStatus'
+          end
+          object lblGemmaRamStatus: TLabel
+            Left = 5
+            Height = 18
+            Top = 53
+            Width = 245
+            Align = alTop
+            Alignment = taCenter
+            AutoSize = False
+            BorderSpacing.Bottom = 1
+            BorderSpacing.Around = 5
+          end
+          object lblbgeRamStatus: TLabel
+            Left = 5
+            Height = 18
+            Top = 29
+            Width = 245
+            Align = alTop
+            Alignment = taCenter
+            AutoSize = False
+            BorderSpacing.Bottom = 1
+            BorderSpacing.Around = 5
+          end
+        end
+        object GroupBox2: TGroupBox
+          Left = 5
+          Height = 85
+          Top = 5
+          Width = 259
+          Align = alTop
+          BorderSpacing.Around = 5
+          Caption = 'Model Llama'
+          ClientHeight = 65
+          ClientWidth = 255
+          TabOrder = 1
+          object cbListGGUF: TComboBox
+            Left = 5
+            Height = 23
+            Top = 5
+            Width = 245
+            Align = alTop
+            BorderSpacing.Around = 5
+            ItemHeight = 15
+            Style = csDropDownList
+            TabOrder = 0
+            OnChange = cbListGGUFChange
+          end
+          object btnReload: TButton
+            AnchorSideLeft.Control = GroupBox2
+            AnchorSideTop.Control = cbListGGUF
+            AnchorSideTop.Side = asrBottom
+            Left = 5
+            Height = 25
+            Top = 34
+            Width = 91
+            BorderSpacing.Left = 5
+            BorderSpacing.Top = 6
+            Caption = 'Reload'
+            TabOrder = 1
+            OnClick = btnReloadClick
+          end
+          object btnOpenParameter: TButton
+            AnchorSideTop.Control = cbListGGUF
+            AnchorSideTop.Side = asrBottom
+            AnchorSideRight.Control = GroupBox2
+            AnchorSideRight.Side = asrBottom
+            Left = 159
+            Height = 25
+            Top = 34
+            Width = 91
+            Anchors = [akTop, akRight]
+            BorderSpacing.Left = 5
+            BorderSpacing.Top = 6
+            BorderSpacing.Right = 5
+            Caption = 'Edit Parameter'
+            TabOrder = 2
+            OnClick = btnOpenParameterClick
+          end
+        end
+        object GroupBox3: TGroupBox
+          Left = 5
+          Height = 57
+          Top = 95
+          Width = 259
+          Align = alTop
+          BorderSpacing.Around = 5
+          Caption = 'RAG '
+          ClientHeight = 37
+          ClientWidth = 255
+          TabOrder = 2
+          object lbJumlahData: TLabel
+            AnchorSideLeft.Side = asrBottom
+            AnchorSideRight.Control = GroupBox3
+            AnchorSideRight.Side = asrBottom
+            Left = 8
+            Height = 24
+            Top = 2
+            Width = 243
+            Alignment = taCenter
+            Anchors = [akLeft, akRight]
+            AutoSize = False
+            BorderSpacing.Left = 3
+            BorderSpacing.Top = 4
+            BorderSpacing.Right = 4
+          end
+        end
+        object GroupBox4: TGroupBox
+          Left = 0
+          Height = 102
+          Top = 464
+          Width = 269
+          Align = alBottom
+          ClientHeight = 82
+          ClientWidth = 265
+          TabOrder = 3
+          object Label1: TLabel
+            AnchorSideLeft.Control = GroupBox4
+            AnchorSideLeft.Side = asrCenter
+            AnchorSideTop.Control = GroupBox4
+            Left = 46
+            Height = 28
+            Top = 4
+            Width = 173
+            Alignment = taCenter
+            AutoSize = False
+            BorderSpacing.Top = 4
+            Caption = 'TabaRAG'
+            Font.Height = -17
+            Font.Style = [fsBold]
+            ParentFont = False
+            WordWrap = True
+          end
+          object Label2: TLabel
+            AnchorSideLeft.Control = GroupBox4
+            AnchorSideLeft.Side = asrCenter
+            AnchorSideTop.Control = Label1
+            AnchorSideTop.Side = asrBottom
+            Left = 23
+            Height = 15
+            Top = 32
+            Width = 218
+            Caption = 'TaxBase Retrieval-Augmented Generation'
+          end
+          object Label3: TLabel
+            AnchorSideLeft.Control = GroupBox4
+            AnchorSideLeft.Side = asrCenter
+            AnchorSideTop.Control = Label2
+            AnchorSideTop.Side = asrBottom
+            Left = 94
+            Height = 15
+            Top = 51
+            Width = 76
+            BorderSpacing.Top = 4
+            Caption = 'KangOz - 2026'
+          end
+          object Label4: TLabel
+            AnchorSideLeft.Control = GroupBox4
+            AnchorSideLeft.Side = asrCenter
+            Left = 132
+            Height = 1
+            Top = 31
+            Width = 1
+            Anchors = [akLeft, akBottom]
+            BorderSpacing.Bottom = 3
+          end
+        end
+        object btnChat: TButton
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = GroupBox1
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = Panel1
+          AnchorSideRight.Side = asrBottom
+          Left = 184
+          Height = 25
+          Top = 259
+          Width = 85
+          Anchors = [akTop, akLeft, akRight]
+          Caption = 'Chat'
+          TabOrder = 4
+          OnClick = btnChatClick
+        end
+        object btnLogPrompt: TButton
+          AnchorSideLeft.Control = Panel1
+          AnchorSideTop.Control = GroupBox1
+          AnchorSideTop.Side = asrBottom
+          Left = 5
+          Height = 25
+          Top = 259
+          Width = 83
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Left = 5
+          Caption = 'Log Prompt'
+          TabOrder = 5
+          OnClick = btnLogPromptClick
+        end
+        object btnRAGAdmin: TButton
+          AnchorSideLeft.Control = btnLogPrompt
+          AnchorSideLeft.Side = asrBottom
+          AnchorSideTop.Control = GroupBox1
+          AnchorSideTop.Side = asrBottom
+          AnchorSideRight.Control = btnChat
+          Left = 93
+          Height = 25
+          Top = 259
+          Width = 86
+          Anchors = [akTop, akLeft, akRight]
+          BorderSpacing.Left = 5
+          BorderSpacing.Right = 5
+          Caption = 'Admin'
+          TabOrder = 6
+          OnClick = btnRAGAdminClick
+        end
+        object Image1: TImage
+          AnchorSideLeft.Control = GroupBox4
+          AnchorSideLeft.Side = asrCenter
+          AnchorSideTop.Side = asrBottom
+          AnchorSideBottom.Control = GroupBox4
+          Left = 101
+          Height = 60
+          Top = 392
+          Width = 66
+          Anchors = [akLeft, akBottom]
+          BorderSpacing.Bottom = 12
+          Picture.Data = {
+            1754506F727461626C654E6574776F726B47726170686963F702000089504E47
+            0D0A1A0A0000000D4948445200000040000000400806000000AA6971DE000000
+            0473424954080808087C0864880000000970485973000001D8000001D801FA5C
+            A6720000001974455874536F667477617265007777772E696E6B73636170652E
+            6F72679BEE3C1A0000027449444154789CED98BD6B535118C69FF4B62117D47C
+            616E6E40A805C12950B18BE02208525CDA7F4005875610BAB408C960DAA5D0A1
+            14C135DDFA071404C1D5494A6B86A288B8796385E44A8554C8314E4D8234F73D
+            E93D879326EF6FCA2527EFC79390F3F0000CC3300CC38C2A11EAC0E767AF5E1E
+            BFD92B368F7C2BE8DCB89B4476E3092EDDCB03007EBFFB88EACA369AD5BAA251
+            FBEB6365E2E2F2ECEDD2CDD7CFD782EA91027C987C24C4D1AF3199E12C37891B
+            7B9B00802FB79620AABECCC7FA46B68FE524FECE7CDB0EFCE2C8C564970700E1
+            75BE055DCBF7D347FCF0C9D9A5971B565800D3039846A9001127DE799DB9A2B2
+            B4B63ECA04883871C40A73EDE758614E8B08AAFB90D760A55269C914B22C0BA9
+            540AB66D03001A8D066AB51A8410E71E4E459F7C3E1FB8232980EFFB52020C2A
+            89442270C771AA40F5ED7B1C2CADE3C4FBA96E2A00B15C06D35B2FE0DCBF0340
+            BD733C758C14E42F60C7BDDBFAA378F95362B9AB7870B80B408F73B4DC2466BE
+            96037724FF04752D0F0027DF3BB57538C76EC7D80BF601A607300D0B401D9870
+            D2DA9A47B39DDABA4C130529C0F5D2821611A2D934264B8BED67D5CEF17FC7D8
+            F31C75C0F3BCD62038BAF3D6775D979D60D0FBA413FC947B2CD5C8542618D6A9
+            2ABB059A5E1DDE72B9FDECAD94952F7F569FFD90365DE9356822130CEB54D907
+            981EC0342C80CA622632C1B026EDC26782619D2A678254C39177829C097226C8
+            99E050C302981EC0349C0952073813E44C70C49D20678292702608CE042F242C
+            80E9014C430AD08F3919B44CB0DB69F6821420BAFCB02EB34CC489C32ECEB79F
+            EDE2BC367BDBDD676A75F14C11A2D934AE159EAABF861886611886191AFE0121
+            0377F379A2BE8B0000000049454E44AE426082
+          }
+        end
+      end
+    end
+  end
+  object TimerRam: TTimer
+    Enabled = False
+    OnTimer = TimerRamTimer
+    Left = 504
+    Top = 112
+  end
+end
