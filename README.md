@@ -21,3 +21,22 @@ Berbeda dengan chatbot konvensional yang bergantung pada cloud dan koneksi inter
 
 🚀 Mengapa Tabarag?
 Tabarag hadir untuk menjembatani kebutuhan informasi perpajakan yang cepat dan akurat, tanpa harus khawatir tentang kuota internet, latensi jaringan, atau batasan perangkat keras yang mahal.
+
+------
+
+🤖 Tabarag: Offline & Lightweight Tax AI Assistant
+Tabarag is an artificial intelligence (AI) chatbot solution specifically designed to help users understand various information regarding general tax knowledge.
+
+Unlike conventional chatbots that rely on the cloud and an internet connection, Tabarag operates entirely locally and offline, and is optimized to be friendly to low-resource devices.
+
+✨ Key Features
+🧠 Tax Specialist: Trained to recognize and answer various questions regarding tax concepts, terms, and general knowledge.
+
+🔌 100% Offline-First: Can be used anytime and anywhere without requiring an internet connection, ensuring your data privacy remains secure on your local device.
+
+🪶 Super Lightweight (Low Resource): Designed with minimal RAM and storage capacity usage, ensuring smooth performance even on low-spec devices.
+
+💻 Local Execution: Runs entirely on your own machine without dependency on external servers or third-party service fees.
+
+🚀 Why Tabarag?
+Tabarag is here to bridge the need for fast and accurate tax information, without having to worry about internet quotas, network latency, or expensive hardware limitations.
