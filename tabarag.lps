@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="tabarag.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="8"/>
+        <CursorPos X="65" Y="20"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\umainform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="MainForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uMainForm"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="271"/>
+        <CursorPos X="105" Y="280"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\utils\ujsonhelper.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uJsonHelper"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="53"/>
+        <CursorPos X="7" Y="53"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\models\ufaqmodel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uFaqModel"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="6"/>
+        <CursorPos X="3" Y="11"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\models\uchatmodel.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uChatModel"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="24"/>
+        <CursorPos X="16"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\database\udbconnection.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDBConnection"/>
+        <EditorIndex Value="7"/>
+        <TopLine Value="31"/>
+        <CursorPos X="48" Y="47"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\database\udbtables.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uDBTables"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="48"/>
+        <CursorPos Y="91"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\services\uembeddingservice.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uEmbeddingService"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2"/>
+        <CursorPos X="80" Y="3"/>
+        <UsageCount Value="68"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\services\ufaqservice.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uFaqService"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="281"/>
+        <CursorPos X="62" Y="286"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\services\uchatservice.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uChatService"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="92"/>
+        <CursorPos Y="111"/>
+        <UsageCount Value="68"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\ufaqform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FaqForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFaqForm"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="69"/>
+        <CursorPos X="7" Y="75"/>
+        <UsageCount Value="68"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\services\uchatllmservice.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="uChatLLMService"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="66"/>
+        <CursorPos X="18" Y="111"/>
+        <UsageCount Value="67"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\uservicemanagerform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ServiceManagerForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uServiceManagerForm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="106"/>
+        <CursorPos X="66" Y="118"/>
+        <UsageCount Value="67"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\ufaqlistform.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="FaqListForm"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="uFaqListForm"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="204"/>
+        <CursorPos X="60" Y="212"/>
+        <UsageCount Value="58"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\ufaqform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="25"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\umainform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="16"/>
+        <UsageCount Value="6"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\uservicemanagerform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="138"/>
+        <CursorPos X="4" Y="163"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\lazarus\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="3997"/>
+        <CursorPos X="52" Y="4013"/>
+        <UsageCount Value="6"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views\ufaqlistform.lfm"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="115"/>
+        <CursorPos X="4" Y="140"/>
+        <UsageCount Value="7"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="474" Column="24" TopLine="460"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="94" TopLine="86"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="616" Column="4" TopLine="612"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="617" TopLine="613"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="753" Column="60" TopLine="729"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="584" Column="61" TopLine="584"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="585" Column="61" TopLine="585"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="388" Column="32" TopLine="372"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="220" Column="12" TopLine="202"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="342" Column="3" TopLine="341"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="215" Column="87" TopLine="208"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="219" Column="37" TopLine="210"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="217" Column="34" TopLine="208"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="228" Column="33" TopLine="213"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="219" Column="20" TopLine="207"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="228" Column="21" TopLine="217"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="227" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="238" Column="18" TopLine="179"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="236" Column="19" TopLine="221"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="234" Column="20" TopLine="218"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="225" Column="9" TopLine="213"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="224" Column="9" TopLine="212"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="208" Column="17" TopLine="204"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="207" Column="17" TopLine="203"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="222" Column="70" TopLine="212"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="220" Column="33" TopLine="211"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="229" TopLine="205"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="9" Column="60"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="281" Column="17" TopLine="270"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views\umainform.pas"/>
+        <Caret Line="280" Column="118" TopLine="261"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>
